@@ -8,7 +8,7 @@ def detect_face(img):
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=8, minSize=(30, 30))
     if len(faces) > 0:
         (x, y, w, h) = faces[0]  # Select the first detected face
-        cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 255), 2)
     return img
 
 cap = cv2.VideoCapture(0)
